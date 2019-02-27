@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>OpenCV教程1</title>
+</head>
+<body>
+<div id="wmd-preview" class="wmd-preview"><div class="md-section-divider"></div><div class="md-section-divider"></div><h1 data-anchor-id="53qd" id="opencv教程1">OpenCV教程1</h1><p data-anchor-id="bsub"><code>教程</code> <code>C++</code> <code>OpenCV</code></p><hr><div class="md-section-divider"></div><h2 data-anchor-id="bktk" id="1教程简介">1.教程简介</h2><p data-anchor-id="ltgz">本教程诣在通过一系列练习，培养学生C++与OpenCV编程方面的能力。学生需要努力完成教程内的各项练习，并完成作业。 <br>
+本教程包括编程能力与算法两个方面的练习。</p><div class="md-section-divider"></div><h2 data-anchor-id="5l34" id="2作业提交">2.作业提交</h2><p data-anchor-id="o6jy">学生需要提交代码与文本两份材料。</p><ul data-anchor-id="c2qz">
+<li>文本包括对自己作业的简单介绍，运行结果，以及作业中要求提供的其他描述。可以采用word或markdown格式</li>
+<li>代码需要提供C++源代码以及相应的CMakeLists.txt。作业的代码要求基于CMake做工程架构</li>
+</ul><div class="md-section-divider"></div><h2 data-anchor-id="09wj" id="3环境要求">3.环境要求</h2><p data-anchor-id="x54g">代码需要在以下环境中可以编译运行，并输出正确结果</p><ul data-anchor-id="bm7c">
+<li>OpenCV 3.4以上</li>
+<li>VisualStudio 2017或2015</li>
+<li>CMake 3.8以上版本</li>
+</ul><div class="md-section-divider"></div><h2 data-anchor-id="rlvb" id="4练习">4.练习</h2><div class="md-section-divider"></div><h3 data-anchor-id="3i0t" id="41-第一题-opencv矩阵数据格式">4.1 第一题 OpenCV矩阵数据格式</h3><div class="md-section-divider"></div><h4 data-anchor-id="iju6" id="内容介绍">内容介绍</h4><ul data-anchor-id="s3mt">
+<li>了解OpenCV矩阵的数据深度与数据格式的定义。</li>
+</ul><blockquote data-anchor-id="1frk" class="white-blockquote">
+  <p>CV_8UC1           CV_8SC1          CV_16U C1       CV_16SC1  <br>
+  CV_8UC2           CV_8SC2          CV_16UC2        CV_16SC2  <br>
+  CV_8UC3           CV_8SC3          CV_16UC3        CV_16SC3  <br>
+  CV_8UC4           CV_8SC4          CV_16UC4        CV_16SC4  <br>
+  CV_32SC1         CV_32FC1         CV_64FC1 <br>
+  CV_32SC2         CV_32FC2         CV_64FC2 <br>
+  CV_32SC3         CV_32FC3         CV_64FC3 <br>
+  CV_32SC4         CV_32FC4         CV_64FC4 <br>
+  参考：<a href="https://blog.csdn.net/weierqiuba/article/details/71036574" target="_blank">https://blog.csdn.net/weierqiuba/article/details/71036574</a> <br>
+  以及：<a href="https://blog.csdn.net/wanggao_1990/article/details/53229428" target="_blank">https://blog.csdn.net/wanggao_1990/article/details/53229428</a></p>
+</blockquote><ul data-anchor-id="7s9r">
+<li>了解每种数据格式的像素应该用什么类型去访问。</li>
+<li>了解cv::Mat&lt;&gt;模板与上述数据类型的对应关系</li>
+</ul><div class="md-section-divider"></div><h4 data-anchor-id="0xtb" id="练习内容1">练习内容1</h4><p data-anchor-id="1i60">从8，16，32，64位深度中，每种深度选两个数据类型，生成一个对应类型的1000*1000的Mat，然后去循环遍历它，将每一位置为1。 <br>
+<strong>要求</strong>：用ptr&lt;&gt;和at&lt;&gt;两种方法去遍历，并比较两种方法的遍历速度的差异（为了测试的更精准，可以多跑几遍测总时间）。 <br>
+<strong>提交</strong>：代码以及一个表，记录了你生成的各种数据类型用ptr&lt;&gt;和at&lt;&gt;两种方法遍历的时间。</p><div class="md-section-divider"></div><h4 data-anchor-id="88iw" id="练习内容2">练习内容2</h4><p data-anchor-id="fem6">学习各种数据格式之间的转化，利用convertTo方法，将16位深度图转化为 CV_8UC1 类型并加以显示 <br>
+<strong>提交</strong>：代码以及转化后显示的深度图。</p><div class="md-section-divider"></div><h4 data-anchor-id="v64b" id="练习内容3">练习内容3</h4><p data-anchor-id="ece4">学会动态判断矩阵数据类型，给你一个矩阵你可以推断出它是上述什么类型的数据 <br>
+<strong>提交</strong>：代码以及运行效果。</p><div class="md-section-divider"></div><h3 data-anchor-id="dstv" id="42-第二题-opencv绘图">4.2 第二题 OpenCV绘图</h3><p data-anchor-id="nb8a">学会用OpenCV绘图，包括点，线，圆，文字的绘制 <br>
+<strong>提交</strong>：代码以及绘制了点，线，圆，文字的图片。</p><div class="md-section-divider"></div><h3 data-anchor-id="rzir" id="43-opencv滤波">4.3 OpenCV滤波</h3><div class="md-section-divider"></div><h4 data-anchor-id="er5w" id="练习内容1-1">练习内容1</h4><p data-anchor-id="cftb">编写均值滤波器 <br>
+<strong>要求</strong>：同一个函数要至少适应CV_8SC3 与 CV_32FC3 两种数据格式.用ptr函数做访问 <br>
+<strong>提交</strong>：代码以及运行效果。</p><div class="md-section-divider"></div><h4 data-anchor-id="6lav" id="练习内容2-1">练习内容2</h4><p data-anchor-id="r0if">编写Guass滤波器 <br>
+<strong>要求</strong>：同一个函数要至少适应CV_8SC3 与 CV_32FC3 两种数据格式.用ptr函数做访问 <br>
+<strong>提交</strong>：代码以及运行效果。</p></div>
+</body>
+</html>
